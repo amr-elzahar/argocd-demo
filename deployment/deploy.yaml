@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: farm-deploy
+spec:
+  selector:
+    matchLabels:
+      app: farm-app
+  template:
+    metadata:
+      labels:
+        app: farm-app
+    spec:
+      containers:
+        - name: farm-app
+          image: amrelzahar/argocd-demo
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 3000
