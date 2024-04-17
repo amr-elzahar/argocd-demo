@@ -1,17 +1,19 @@
-# Node Farm
+# ArgcoCd Demo
 
-Node Farm is a simple Node JS application to practice routing.
+## Prerequisites
 
-## Usage
+Before you begin, ensure you have the following prerequisites:
 
-```bash
-# Install application dependencies
-npm install
+1. Minikube cluster
+2. ArgoCD installed
+3. GitOps repository
 
-# Start the application
-npm start
-```
+## Steps
 
-## License
+Follow these steps to deploy the application:
 
-The design of this application belongs to Jonas Schmedtmann in his complete Node JS bootcamp. You can find his repo [here](https://github.com/jonasschmedtmann/complete-node-bootcamp).
+1. Apply the configuration using the following command:
+
+   ```bash
+   kubectl apply --filename application-argocd.yaml
+   ```
